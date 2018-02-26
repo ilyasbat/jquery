@@ -1,0 +1,52 @@
+<html>
+	<head>
+		<title>Jquery Giriş</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div>Bu bir slide örneği metnidir. 
+			Bu bir slide örneği metnidir. 
+			Bu bir slide örneği metnidir. 
+			Bu bir slide örneği metnidir. 
+			Bu bir slide örneği metnidir. 
+			Bu bir slide örneği metnidir. 
+			Bu bir slide örneği metnidir. 
+			Bu bir slide örneği metnidir. 
+			Bu bir slide örneği metnidir. 
+			Bu bir slide örneği metnidir. 
+			Bu bir slide örneği metnidir. 
+		</div>
+		<a href="javascript://" onclick="sup()">slideUP</a> - <a href="javascript://" onclick="sdown()">slideDown</a>
+		<hr>
+		<h1>slideToggle Örneği</h1>
+	<div id="iki">Bu bir slide örneği metnidir. 
+			Bu bir slide örneği metnidir. 
+			Bu bir slide örneği metnidir. 
+			Bu bir slide örneği metnidir. 
+			Bu bir slide örneği metnidir. 
+			Bu bir slide örneği metnidir. 
+			Bu bir slide örneği metnidir. 
+			Bu bir slide örneği metnidir. 
+			Bu bir slide örneği metnidir. 
+			Bu bir slide örneği metnidir. 
+			Bu bir slide örneği metnidir. 
+		</div>
+		<a href="javascript://" class="tog">slideToggle</a>
+		<script>
+			function sup()
+			{
+				$('div').slideUp('slow',function(){
+
+					//$('div').slideDown('slow');
+				});
+			}
+			function sdown()
+			{
+				$('div').slideDown('slow');
+			}
+			$('.tog').click(function(){
+				$('#iki').slideToggle('normal');
+			});
+		</script>
+	</body>
+</html>

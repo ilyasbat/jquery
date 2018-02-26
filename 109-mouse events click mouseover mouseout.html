@@ -1,0 +1,37 @@
+<html>
+<html>
+	<head>
+		<title>Jquery Giriş</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>	
+	<body>
+		<p id="tikla">Bana tıkla</p>
+		<div>bana da tıkla</div>
+		<h1>Ben en büyüğüm benim üstüme gel</h1>
+		<p id="ayril">
+			laşsd ksalş dlşas klaşskd lsaş dlşask dlsaşkd lsaş<br/>
+			lkasdjsakldksladjklsajdksladjklsa<br/>
+		bunun üstünden ayrıl</p>
+
+		<script>
+			function haciEkle(){
+				$('#ayril').css('color','green');
+				$('#ayril').append('<br/>Tamam hacı yeter');
+			}
+			$('#tikla,div').click(function()
+				{
+					alert('Çok güzel tıkladın');
+				}
+			);
+			$('h1').mouseover(function(){
+
+				$('h1').css('color','red');
+			});
+			$('#ayril').mouseover(haciEkle);
+			$('#ayril').mouseout(function(){
+				$('#ayril').css('color','black');
+
+			});
+		</script>
+	</body>
+</html>

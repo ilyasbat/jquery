@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Jquery Giriş</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<style>
+			.renkver{color:red;text-decoration: underline;list-style-type: none}
+		</style>
+	</head>	
+	<body>
+		<ul>
+			<li>İlyas Bat</li>
+			<li>Ahmet Güzel</li>
+			<li>Mehmet Çirkin</li>
+			<li>Ayşe Fatma</li>
+			<li>domates biber</li>
+		</ul>
+		
+<ul class="iki">
+  <li id="foo">foadaso</li>
+  <li id="bar">baradssada</li>
+  <li id="baz">baasdasdasz</li>
+</ul>
+<script>
+			$('li').each(function(index){
+				$(this).addClass('renkver');
+				//removeClass
+				$(this).prepend(index+'-');
+			});
+			$('li').eq(1).addClass('renkver').prepend(1+'-');
+			$('ul').eq(1).append($('.iki li').index($('#baz')));
+
+		</script>
+
+	</body>
+</html>
