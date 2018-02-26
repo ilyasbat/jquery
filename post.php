@@ -15,8 +15,8 @@
 			/*$.post('posttest.php',{'ad':'ilyas','soyad':'bat','no':'546'},
 				function(data){
 					$('#sonuc').html(data);
-			});*/
-			
+			});
+			*/
 			$('#gonder').click(function()
 				{
 					$('#sonuc').html("Yükleniyor...");
