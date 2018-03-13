@@ -1,0 +1,59 @@
+<html>
+	<head>
+		<title>Jquery Form Validation</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<style>
+			form{width:500px;margin:0 auto;}
+			div{margin-top:15px;width:400px;}
+			input{width:300px;}
+			textarea{width: 300px;height: 200px}
+		</style>
+	</head>
+	<body>
+
+	<form action="" method="post" id="deneme">	
+		<div id="hata"></div>
+		<div id="isim"><input type="text" name="isim" gerekli="true" placeholder="İsim" />**</div>
+		<div id="mail"><input type="text" name="mail" gerekli="true" placeholder="Mail" />**</div>
+		<div id="site"><input type="text" name="site" placeholder="Site"></div>
+		<div id="yorum"><textarea name="yorum" gerekli="true" placeholder="Yorum"></textarea>**</div>
+		<button type="submit">Gönder</button>
+	</form>
+
+<script>
+form_kontrol('deneme');
+function form_kontrol(id)
+{
+
+	$('#'+id).submit(function(e){
+		var hata = false;
+
+		$('#'+id+' input, #'+id+' textarea').each(function(){
+			var gerekli = $(this).attr('gerekli');
+			if(gerekli=='true')
+			{
+				var deger = $(this).val();
+				var isim = $(this).attr('name');
+				if(deger=='')
+				{
+					hata = true;
+					$('#'+isim).css('border','1px solid red');
+				}
+				else
+				{
+					$('#'+isim).css('border','none');
+				}
+			}
+
+		});
+		if(hata)
+		{
+			$('#hata').html('<b style="color:red">**Lütfen gerekli alanları doldurun</b>');
+			e.preventDefault();
+		}
+	});
+}
+</script>
+
+	</body>
+	</html>
