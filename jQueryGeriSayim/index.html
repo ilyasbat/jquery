@@ -1,0 +1,28 @@
+<html>
+<head>
+	<title>Jquery Geri Sayım Sayacı</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<style>
+	#sayac{background:url('loading.gif') no-repeat top left;width:300px;height:300px;
+	margin:0 auto; padding:85px;font-weight:bold;font-size:24pt}
+	</style>
+	</head>
+<body>
+<div id="sayac"></div>
+<script>
+var saniye = 10;
+var url = 'http://www.ilyasbat.com.tr';
+setInterval(function(){
+	if(saniye>=0)
+	{
+		$('#sayac').html(saniye);
+		saniye = saniye-1;
+	}
+	else
+	{
+		window.location = url;
+	}
+},1000);
+</script>
+</body>
+</html>
